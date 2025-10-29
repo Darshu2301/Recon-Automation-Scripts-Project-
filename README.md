@@ -1,19 +1,30 @@
-# Recon Automation Scripts
+Automated Recon is a modular collection of scripts and wrappers for performing safe, repeatable reconnaissance during authorized network and web security assessments.
+It focuses on subdomain discovery, DNS mapping, and passive intelligence gathering with machine-readable outputs (CSV/JSON) for easy reporting.
 
-This repository contains useful automation scripts to help with reconnaissance tasks during penetration testing and security assessments.
+Why use this repo
 
-## Scripts Included
+Rapid, repeatable recon workflows to find attack surface (subdomains, hosts, historical endpoints).
 
-- **recon_scan.sh**  
-  Automates scanning and information gathering for a target domain.
+Combines passive OSINT with safe, polite active checks (with rate limits).
 
-- **move_downloaded_recon_tools.sh**  
-  Helps organize and move recon tools downloaded to your system.
+Outputs standardized JSON/CSV for reporting or pipeline automation.
 
-## How to Use
+Docker-ready for isolated execution.
 
-1. Make sure you have the necessary dependencies installed (like `amass`, `sublist3r`, etc.).
+Key features
 
-2. Run the recon script with a target domain as an argument:  
-   ```bash
-   ./recon_scan.sh example.com
+Subdomain enumeration (amass, subfinder, crt.sh scraping fallback).
+
+DNS mapping & resolution (massdns / dnsx style pipeline).
+
+Passive intelligence: crt.sh, Wayback, archive sites, CNAME/A record history (API optional).
+
+HTTP probing & basic fingerprinting (httpx-like checks + screenshot option).
+
+Output formats: consolidated JSON, CSV, and simple HTML atlas.
+
+Rate-limit and polite-scan options + logging.
+
+Dockerfile + quickstart script for reproducible runs.
+
+Modular: use Bash wrappers or Python modules independently.
